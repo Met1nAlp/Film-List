@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/gradient_background_main">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewGorsel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="#FFFFFFFF"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/DetayFilmGorseliImageView"
+                android:layout_width="210dp"
+                android:layout_height="315dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_image_large"
+                android:elevation="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/DetayFilmAdiYazisi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#FF212121"
+                android:textSize="24sp"
+                android:text="Film Adı "
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/DetayFilmGorseliImageView"
+                app:layout_constraintTop_toTopOf="@id/DetayFilmGorseliImageView" />
+
+            <TextView
+                android:id="@+id/DetayFilmAdiTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#FF212121"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/DetayFilmGorseliImageView"
+                app:layout_constraintTop_toBottomOf="@+id/DetayFilmAdiYazisi" />
+
+
+            <TextView
+                android:id="@+id/DetayFilmCikisTarihiYazisi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="#FF616161"
+                android:text="Çıkış Tarihi"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/DetayFilmGorseliImageView"
+                app:layout_constraintTop_toBottomOf="@id/DetayFilmAdiTextView" />
+
+            <TextView
+                android:id="@+id/DetayFilmCikisTarihiTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF616161"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/DetayFilmGorseliImageView"
+                app:layout_constraintTop_toBottomOf="@id/DetayFilmCikisTarihiYazisi" />
+
+            <TextView
+                android:id="@+id/DetayFilmTuruTextViewYazisi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:textColor="#FF616161"
+                android:text="Türü"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/DetayFilmGorseliImageView"
+                app:layout_constraintTop_toBottomOf="@id/DetayFilmCikisTarihiTextView" />
+
+            <TextView
+                android:id="@+id/DetayFilmTuruTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF616161"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/DetayFilmGorseliImageView"
+                app:layout_constraintTop_toBottomOf="@id/DetayFilmTuruTextViewYazisi" />
+
+            <TextView
+                android:id="@+id/DetayFilmSuresiYazisi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#FF616161"
+                android:text="Film Süresi"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/DetayFilmGorseliImageView"
+                app:layout_constraintTop_toBottomOf="@id/DetayFilmTuruTextView" />
+
+            <TextView
+                android:id="@+id/DetayFilmSuresiTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF616161"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/DetayFilmGorseliImageView"
+                app:layout_constraintTop_toBottomOf="@id/DetayFilmSuresiYazisi" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Summary card below the image and basic info -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewOzet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#FFFFFFFF"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewGorsel">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Özet"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FF212121"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/ozetBaslik" />
+
+            <TextView
+                android:id="@+id/DetayFilmOzetiTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#FF424242"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ozetBaslik" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Enhanced Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/DetayAnaSayfayaDonButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Ana Sayfaya Dön"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="8dp"
+        app:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewOzet"
+        app:rippleColor="#33FFFFFF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
