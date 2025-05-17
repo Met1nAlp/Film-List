@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.navigation.navOptions
 import com.bumptech.glide.Glide
 import com.example.stajprojesi.R
 import com.example.stajprojesi.databinding.FragmentDetayBinding
@@ -95,6 +97,22 @@ class DetayFragment : Fragment() {
             findNavController().navigate(R.id.action_detayFragment_to_anaSayfaFragment) ;
 
         }
+
+        val geriDon = object : OnBackPressedCallback(true)
+        {
+            override fun handleOnBackPressed()
+            {
+                findNavController().navigate(
+                    R.id.action_detayFragment_to_anaSayfaFragment,
+                    null,
+                    navOptions {
+                        popUpTo(R.id.anaSayfaFragment) { inclusive = true }
+                    }
+                )
+            }
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, geriDon)
     }
 
 
