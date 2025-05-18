@@ -15,7 +15,8 @@ import com.example.stajprojesi.databinding.FragmentDetayBinding
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-class DetayFragment : Fragment() {
+class DetayFragment : Fragment()
+{
     private val args: DetayFragmentArgs by navArgs()
     private var _binding: FragmentDetayBinding? = null
     private val binding get() = _binding!!
@@ -76,7 +77,8 @@ class DetayFragment : Fragment() {
             film.cikisTarihi.let { date ->
                 inputFormat.parse(date)?.let { outputFormat.format(it) } ?: film.cikisTarihi
             }
-        } catch (e: Exception)
+        }
+        catch (e: Exception)
         {
             film.cikisTarihi
         }
